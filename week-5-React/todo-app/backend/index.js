@@ -2,9 +2,9 @@ const express=require("express");  //initialises emplty express app
 const app=express();
 const {todo} =require("./database")
 const {createTodo , updateTodo} =require("./types");
-
+const cors=require("cors");
 app.use(express.json());
-
+app.use(cors());
 app.post("/todo" , async function(req , res ){
 
     const createPayload=req.body;
