@@ -1,49 +1,38 @@
+import {  useState} from "react";
 
 function App() {
- return (
-    
-      <div>
-        <CradWrapper> 
-          <div>
-            Hii There 1
-          </div>
-        </CradWrapper>
-        <CradWrapper>
-        <div>
-            Hii There 2
-          </div>
-        </CradWrapper>
-        <CradWrapper>
-        <div>
-            Hii There 3
-          </div>
-        </CradWrapper>
-       
-        </div>
-  )
-}
 
-// function TextComponent(){
-//   return <div>
-//     Hii There
-//   </div>
-// }
+  const [counter , setCounter]=useState(0);
+  const [inputvalue , setInputValue]=useState(1);
+  
+  // let count=0;
+  // for(let i=0 ; i<=inputvalue ;  i++)
+  // {
+  //   count=count+i;
+  // }
 
-// function TextComponent2(){
-//   return <div>
-//     Hii There
-//   </div>
-// }
+  
 
-function CradWrapper({children}){
-  //create a div which has a 
 
-   return <div style={{border :"2px solid black"}}>
-     {children}
-     
-   
-   </div>
 
+
+ return ( <div>
+
+  <input onChange={function(e){
+    console.log()
+    setInputValue(e.target.value);
+  }} placeholder="Find sum form 1 to n" />
+  <br/>
+ Sum from  1 to {inputvalue} is {count}
+ <br/>
+
+ <button onClick={function(){
+  setCounter(counter +1);
+ }}> Counter : {counter}</button>
+
+  
+ </div>
+ )
 }
 
 
