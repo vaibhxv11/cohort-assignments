@@ -1,5 +1,5 @@
 {
-  "name": "week-10",
+  "name": "prisma",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/pg": "^8.11.4",
-    "pg": "^8.11.3",
-    "tsc": "^2.0.4"
+    "@prisma/client": "^5.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "prisma": "^5.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
   }
 }
