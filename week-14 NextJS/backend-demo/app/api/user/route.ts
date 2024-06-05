@@ -1,16 +1,16 @@
-// export function GET(){
-//     return Response.json({
-//         email :"vaibhav@gmail.com" ,
-//         name :"vaibhav Dudhal"
-//     })
-// }
-
 import { NextRequest } from "next/server"
-
-
+import { PrismaClient } from "@prisma/client";
+import { create } from "domain";
+const client =new PrismaClient();
 export async function POST(req :NextRequest){
 
     const body=await req.json();
+    await client.user.create({
+        data :{
+            username: body.username ,
+            password : body.password
+        }
+    })
 
     //store the body in the database
     console.log(body);
