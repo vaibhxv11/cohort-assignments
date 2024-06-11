@@ -17,6 +17,9 @@ steps:
       
       -name: Install Dependencies
        run: npm install
+
+      -name: Geneerate Prisma Client
+       run: npm run db:generate
       
       -name: Run Build 
        run: npm run build
